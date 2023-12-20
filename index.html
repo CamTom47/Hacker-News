@@ -37,11 +37,17 @@
   <div class="navbar-brand">
     <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
   </div>
+  <a href="#" class="nav-link hidden" id="nav-submit">Submit</a>
+  <a class="nav-link hidden" href="#" id="nav-favorites">Favorites</div>
+  <a class="nav-link hidden" href="#" id="nav-my-stories">My Stories</div>
+  
   <div class="nav-right">
     <a class="nav-link" href="#" id="nav-login">login/signup</a>
+  </div>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
   </div>
+  <div>
 </nav>
 
 <!-- area for stories (all stories, user stories, favorites) -->
@@ -52,7 +58,8 @@
 
   <!-- List of all stories -->
   <ol id="all-stories-list" class="stories-list"></ol>
-
+  <ol id="favorite-stories" class="stories-list"></ol>
+  <ol id="own-stories" class="stories-list"></ol>
 </section>
 
 <!-- Login and signup forms -->
@@ -63,11 +70,11 @@
     <h4>Login</h4>
     <div class="login-input">
       <label for="login-username">username</label>
-      <input id="login-username" autocomplete="current-username">
+      <input id="login-username" autocomplete="current-username" required>
     </div>
     <div class="login-input">
       <label for="login-password">password</label>
-      <input id="login-password" type="password" autocomplete="current-password">
+      <input id="login-password" type="password" autocomplete="current-password" required>
     </div>
     <button type="submit">login</button>
     <hr>
@@ -82,18 +89,67 @@
     <h4>Create Account</h4>
     <div class="login-input">
       <label for="signup-name">name</label>
-      <input id="signup-name" autocapitalize="words">
+      <input id="signup-name" autocapitalize="words" required>
     </div>
     <div class="login-input">
       <label for="signup-username">username</label>
-      <input id="signup-username" autocomplete="new-username">
+      <input id="signup-username" autocomplete="new-username" required>
     </div>
     <div class="login-input">
       <label for="signup-password">password</label>
-      <input id="signup-password" autocomplete="new-password" type="password">
+      <input id="signup-password" autocomplete="new-password" type="password" required>
     </div>
     <button type="submit">create account</button>
   </form>
+</section>
+
+<section>
+  <!-- Story Update Form -->
+  <form id="update-form" action="#" class="hidden" method="post">
+    <h4>Story Update Form</h4>
+    <div class="story-input">
+      <label for="update-title">Story Title
+        <input type="text" id="update-title" name="update-title" required placeholder="Story Title">
+      </label>
+    </div>
+    <div class="story-input"">
+      <label for="update-author"> Story Author
+        <input type="text" id="update-author" name="update-author" required placeholder="Author">
+      </label>
+    </div>
+    <div class="story-input"">
+      <label for="update-url"> Story URL
+        <input type="text" id="update-url" name="update-url" required placeholder="Story URL">
+      </label>
+    </div>
+    <div>
+      <button id="update-button">Update Story</button>
+    </div>
+  </form>
+</section>
+
+ <!-- Story Post Form -->
+ <form id="submit-form" action="#" class="hidden" method="post">
+  <h4>Story Submit Form</h4>
+  <div class="story-input">
+    <label for="story-title">
+      <input type="text" id="story-title" name="story-title" required placeholder="Story Title">
+    </label>
+  </div>
+  <div class="story-input"">
+    <label for="story-author">
+      <input type="text" id="story-author" name="story-author" required placeholder="Author">
+    </label>
+  </div>
+  <div class="story-input"">
+    <label for="story-url">
+      <input type="text" id="story-url" name="story-url" required placeholder="Story URL">
+    </label>
+  </div>
+  <div>
+    <button id="submit-button">Add Story</button>
+  </div>
+</form>
 </section>
 
 <!-- Library JS & our JS -->

@@ -2,10 +2,11 @@
 
 nav {
   display: flex;
-  background-color: #ff6600;
+  background-color: hsl(20, 80%, 60%);
   align-items: center;
   padding: 5px 20px;
   border-radius: 3px 3px 0 0;
+  height: 4rem;
 }
 
 .navbar-brand {
@@ -13,11 +14,55 @@ nav {
 }
 
 .nav-link {
-  font-size: 0.85rem;
+  font-size: .85rem;
   margin: 0 3px;
+  padding: 5px 10px;
+  border-right: 1px solid black;
 }
 
 .nav-right {
   margin-left: auto;
   text-align: right;
+}
+
+#nav-user-profile  {
+  border-right: none;
+}
+
+body  {
+  background: linear-gradient(90deg, hsl(200, 80%, 75%), hsl(23, 70%, 80%))
+}
+
+#story  {
+  border-bottom: 1px solid grey;
+  margin-bottom: 50px;
+}
+
+.story-link  {
+font-size: 1.2rem;
+}
+
+#all-stories-list{
+  padding: 20px;
+}
+
+.story-user{
+display: block;
+padding: 0;
+margin: 0;
+color: black;
+}
+
+.story-hostname{
+display: block;
+padding: 0;
+margin: 0;
+font-size: .75rem;
+}
+
+.story-author{
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: orangered;
 }
